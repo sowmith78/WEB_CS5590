@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>Rock, Paper, Scissors</title>
+   <style>
+       body{
+           background-image: url("rps.png");
+       }
+       .para{color: blue ;font-size: 60px;text-align: center}
+   </style>
+</head>
+<body>
+
+<h1 style="color: green;font-size: 80px;text-align: center">Rock, Paper, Scissors</h1>
+
+<div >
+
+    <script>
+        var userPick = prompt("Do you choose rock / paper / scissors?");
+        
+            document.write("<p class='para'>Your Pick is :" + " " + userPick + "</p>");
+        
+        var computerPick = Math.random();
+        if (computerPick < 0.34) {
+            computerPick = "rock";
+        } else if(computerPick <= 0.67) {
+            computerPick = "paper";
+        } else {
+            computerPick = "scissors";
+        }
+        
+        document.write("<p class='para'>Computer pick is :" + " " + computerPick + "</p>");
+        
+        var compare = function(one,two) {
+            if (one === two) {
+                return "TIE!";
+            }
+            if (one === "rock") {
+                if (two === "scissors") {
+                    return "YOU WIN!";
+                } else {
+                    return "YOU LOST";
+                }
+            }
+            if (one === "paper") {
+                if (two === "rock") {
+                    return "YOU WIN!";
+                } else {
+                    return "YOU LOST";
+                }
+            }
+            if (one === "scissors") {
+                if (two === "rock") {
+                    return "YOU LOST";
+                } else {
+                    return "YOU WON";
+                }
+            }
+        };
+        var result = compare(userPick,computerPick);
+        document.write("<br><hr><br> <p class='para'>" + result + "<p>");
+    </script>
+
+</div>
+
+</body>
+</html>
