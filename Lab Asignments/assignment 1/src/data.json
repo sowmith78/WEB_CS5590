@@ -1,0 +1,66 @@
+{
+    "courses": [
+        {
+            "description": "Mobile/Web",
+            "level": "ms",
+            "spring": "available",
+            "summer": "available",
+            "fall": "available",
+            "degree": "cs",
+            "instructor": "Lee/Karthik",
+            "prerequisites": "HTML, CSS",
+            "credits": 3,
+            "ratings": 4,
+            "links": "NA",
+            "availability":"False",
+            "duration":"8 weeks"
+        },
+        {
+            "description": "Machne Learning",
+            "level": "ms",
+            "spring": "available",
+            "summer": "available",
+            "fall": "NA",
+            "degree": "cs",
+            "instructor": "Lee",
+            "prerequisites": "NA",
+            "credits": 3,
+            "ratings": 4,
+            "links": "NA",
+            "availability":"True",
+            "duration":"8 weeks"
+        },
+        {
+            "description": "DAA",
+            "level": "ms",
+            "spring": "available",
+            "summer": "available",
+            "fall": "available",
+            "degree": "cs",
+            "instructor": "appie",
+            "prerequisites": "NA",
+            "credits": 3,
+            "ratings": 4,
+            "links": "NA",
+            "availability":"True",
+            "duration":"8 weeks"
+        },
+        {
+            "description": "Parallel Algorithms",
+            "level": "ms",
+            "spring": "NA",
+            "summer": "available",
+            "fall": "NA",
+            "degree": "cs",
+            "instructor": "nit",
+            "prerequisites": "html",
+            "credits": 3,
+            "ratings": 4,
+            "links": "NA",
+            "availability":"True",
+            "duration":"8 weeks"
+        }
+
+
+    ]
+}
