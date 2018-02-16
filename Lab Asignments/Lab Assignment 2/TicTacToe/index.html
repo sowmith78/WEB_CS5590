@@ -1,0 +1,112 @@
+<html ng-app>
+<head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+</head>
+
+<body ng-controller="hangmanController">
+<h1><i>Tic Tac Toe!</i></h1>
+
+<div class="container">
+    <div class="well">
+        <div><button class="btn-primary btn-lg" ng-repeat="cell in board[0]" ng-disabled="isTaken(cell);" ng-click="move(cell);">{{ cell.value }}</button><br></div>
+        <div><button class="btn-primary btn-lg" ng-repeat="cell in board[1]" ng-disabled="isTaken(cell);" ng-click="move(cell);">{{ cell.value }}</button></div>
+        <div><button class="btn-primary btn-lg" ng-repeat="cell in board[2]" ng-disabled="isTaken(cell);" ng-click="move(cell);">{{ cell.value }}</button></div>
+        <br/>
+        <p>
+            <span ng-hide="winner || cat">Current Player: {{ currentPlayer }}</span><br><br>
+            <span ng-hide="winner">Player {{ currentPlayer }} won!</span>
+            <span ng-show="cat">Match is a TIE</span>
+        </p>
+    </div>
+</div>
+
+<button ng-click="reset();" class="btn btn-large">New Game</button>
+
+
+<style>
+    *{
+        text-align: center;
+        font-family: "Courier"
+    }
+
+    body {
+        padding: 30px 45px;
+        font-family: "Verdana";
+        background-color: cornsilk;
+    }
+
+    h1 {
+        margin: 35px;
+    }
+
+    .t3cell {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
+    }
+    .btn-primary{
+        background-color: chartreuse;
+        font-weight: 500;
+        border-radius: 30px;
+
+        height: 40px;
+        width : 35px;
+    }
+</style>
+
+<script>
+    var hangmanController = function($scope) {
+
+        $scope.board = [
+            [ { value: '-' }, { value: '-' }, { value: '-' } ],
+            [ { value: '-' }, { value: '-' }, { value: '-' } ],
+            [ { value: '-' }, { value: '-' }, { value: '-' } ]
+        ];
+
+        $scope.reset = function() {
+            // TODO: set each cell.value = '-'
+
+            $scope.currentPlayer = 'X';
+            $scope.winner = false;
+            $scope.cat = false;
+        };
+
+        $scope.reset();
+
+        $scope.isTaken = function(cell) {
+            return cell.value !== '-';
+        };
+
+        var checkForMatch = function(cell1, cell2, cell3) {
+            return cell1.value === cell2.value &&
+                cell1.value === cell3.value &&
+                cell1.value !== '-';
+        };
+
+        var checkForEndOfGame = function() {
+            // TODO: check for a rowMatch, columnMatch, or diagonalMatch
+
+            // $scope.winner = rowMatch || columnMatch || diagonalMatch;
+
+            // TODO: if we don't have a winner, check for cat
+
+            return $scope.winner || $scope.cat;
+        };
+
+        $scope.move = function(cell) {
+            cell.value = $scope.currentPlayer;
+            if (checkForEndOfGame() === false) {
+                $scope.currentPlayer = $scope.currentPlayer === 'X' ? 'O' : 'X';
+            }
+        };
+
+    };
+</script>
+
+</body>
+</html>
+
