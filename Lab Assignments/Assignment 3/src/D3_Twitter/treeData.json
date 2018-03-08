@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Sowmith Reddy",
+    "parent": "US",
+    "children": [
+      {
+        "name": "Avinash Poluru",
+        "parent": "US"
+
+      },
+      {
+        "name": "Nithin Nooka",
+        "parent": "IND"
+
+      },
+      {
+        "name": "Kiraak Pallay",
+        "parent": "US"
+
+      },
+      {
+        "name": "Zack Effron",
+        "parent": "US"
+
+      },
+      {
+        "name": "Seattle",
+        "parent": "US"
+
+      },
+
+      {
+        "name": "Ben Ward",
+        "parent": "US"
+
+      },
+      {
+        "name": "Kenneth P Kufluk",
+        "parent": "US"
+
+      },
+      {
+        "name": "Seth Tracy",
+        "parent": "US"
+
+      },
+      {
+        "name": "Arnaud nier",
+        "parent": "US"
+
+      },
+      {
+        "name": "Mattis Harry",
+        "parent": "US"
+
+      },
+      {
+        "name": "March wood",
+        "parent": "US"
+
+      }
+
+    ]
+  }
+]

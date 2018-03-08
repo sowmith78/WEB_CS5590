@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friends Search :: Twitter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <script type="text/javascript" src="js/news_search.js"></script>
+    <style>
+
+        .container-fluid{
+            background-color: cobaltblue;
+        }
+    </style>
+</head>
+<body onload="findSources()">
+<div class="container-fluid">
+
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="panel panel-default" >
+                <div class="panel-heading">
+                    <a href="login.html">
+                        Home
+                    </a>
+                    <h1 class="text-center">Twitter Friends Search <img width="100" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png"/></h1>
+                </div>
+                <div class="panel-body">
+                    <input id="searchTopic" type="text" class="form-control" placeholder="Search Friends..." />
+
+                    <br><br>
+                    <button class="btn btn-lg btn-primary btn-primary:active btn-primary:hover btn-primary:focus btn-block" onclick="searchNews()">Search</button>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 text-center" id="output">
+                    </div>
+
+                </div>
+            </div>
+
+    </div>
+</div>
+</body>
+</html>
